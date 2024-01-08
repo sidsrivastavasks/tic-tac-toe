@@ -31,8 +31,10 @@ const Board = () => {
     }
 
     return (
-        <>
-            <div className="status">{status}</div>
+        <div data-testid="board">
+            <div className="status" data-testid="status">
+                {status}
+            </div>
             <div className="board-row">
                 <Square
                     value={squares[0]}
@@ -75,7 +77,7 @@ const Board = () => {
                     onSquareClick={() => handelClick(8)}
                 />
             </div>
-        </>
+        </div>
     );
 };
 
